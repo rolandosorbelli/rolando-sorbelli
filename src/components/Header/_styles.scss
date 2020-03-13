@@ -1,0 +1,38 @@
+.header__items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--left {
+    width: 60px;
+    height: auto;
+    align-self: flex-start;
+
+    & > img {
+      width: 60px;
+    }
+  }
+
+  &--right {
+    cursor: pointer;
+
+    &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      height: 30px;
+      border-radius: 12px;
+      background-color: $secondary;
+
+      & > span {
+        font-family: "raleway";
+        font-weight: 700;
+        font-size: 0.875rem;
+        color: $primary;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
