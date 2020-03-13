@@ -1,0 +1,40 @@
+.about {
+  margin-top: 200px;
+
+  &__title {
+    margin-bottom: 100px;
+
+    & > h1 {
+      font-family: "raleway";
+      font-weight: 700;
+      font-size: 2.25rem;
+      color: $text-light;
+
+      & > span {
+        font-weight: 100;
+      }
+    }
+
+    & > h2 {
+      font-family: "raleway";
+      font-weight: 100;
+      font-size: 2rem;
+      color: $text-light;
+      margin-top: 2px;
+    }
+  }
+
+  &__content {
+    width: 85%;
+
+    & > p {
+      font-family: "raleway";
+      font-weight: 100;
+      font-size: 1rem;
+      font-style: italic;
+      color: $text-light;
+      letter-spacing: 0.1rem;
+      line-height: 25px;
+    }
+  }
+}
