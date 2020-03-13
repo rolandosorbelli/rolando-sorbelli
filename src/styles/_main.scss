@@ -1,3 +1,6 @@
+//Reset
+@import "./reset.scss";
+
 //Main
 @import "./_colours.scss";
 
@@ -8,5 +11,12 @@
 @import "../components/Header/_styles.scss";
 
 html {
+  background: rgb(0, 42, 50);
+  background: linear-gradient(180deg, $primary 0%, $primary-light 100%);
   height: 100%;
+}
+
+body {
+  font-size: 16px;
+  margin: 30px 40px 0 40px;
 }
