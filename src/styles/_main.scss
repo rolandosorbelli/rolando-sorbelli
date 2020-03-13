@@ -1,0 +1,12 @@
+//Main
+@import "./_colours.scss";
+
+// Viewport and breakpoints
+@import "./_breakpoints.scss";
+
+// Components
+@import "../components/Header/_styles.scss";
+
+html {
+  height: 100%;
+}
