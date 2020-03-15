@@ -15,10 +15,10 @@
 
 html {
   font-size: 16px;
-  overflow-x: hidden;
 }
 
 body {
+  overflow-x: hidden;
   background: rgb(0, 42, 50);
   background: linear-gradient(180deg, $primary 0%, $primary-light 100%);
   margin: 30px 40px 0 40px;
