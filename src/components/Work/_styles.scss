@@ -1,0 +1,57 @@
+.work {
+  margin: 20px 0;
+
+  &::after {
+    content: "";
+    display: block;
+    background-color: #f6e27f;
+    height: 260px;
+    width: 2000px;
+    position: relative;
+    z-index: -1;
+    top: -100px;
+    left: -200px;
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+
+  &__entry--wrapper {
+    display: flex;
+  }
+
+  &__entry--promo {
+    position: relative;
+
+    & > h2 {
+      font-family: "raleway";
+      font-weight: $bold;
+      font-size: 1.125rem;
+      color: $primary;
+      margin: 0 0 10px 0;
+    }
+
+    &--inner {
+      width: 250px;
+      height: 230px;
+      position: absolute;
+      background-color: $text-light;
+
+      & > span {
+        text-align: center;
+        display: block;
+        padding: 10px 0;
+        font-family: "raleway";
+        font-weight: $regular;
+        font-size: 1rem;
+        color: $primary;
+      }
+
+      & > img {
+        width: 250px;
+        height: auto;
+        border: 2px solid white;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
