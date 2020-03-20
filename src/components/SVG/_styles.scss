@@ -1,0 +1,9 @@
+.waves {
+  & > svg {
+    display: block;
+  }
+
+  & .svg-bottom {
+    transform: rotate(180deg);
+  }
+}
