@@ -38,6 +38,15 @@ class Work extends React.Component {
                 </span>
               </div>
             </div>
+            <div className="work__entry--promo">
+              <h2>Lorem Ipsum</h2>
+              <div className="work__entry--promo--inner">
+                <img src={work_1} alt="" />
+                <span>
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+                </span>
+              </div>
+            </div>
           </Slider>
         </div>
       </div>
