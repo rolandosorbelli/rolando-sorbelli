@@ -5,5 +5,8 @@
 
   & .svg-bottom {
     transform: rotate(180deg);
+    position: relative;
+    bottom: 40px;
+    z-index: -1;
   }
 }
