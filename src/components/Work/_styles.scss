@@ -5,7 +5,8 @@
   width: 100%;
 
   &__entry--wrapper {
-    margin: 0 0 20px 40px;
+    // margin: 0 0 20px 40px;
+    margin-bottom: 20px;
     // display: grid;
     // grid-template-columns: 1fr auto;
     // grid-column-gap: 2rem;
@@ -13,6 +14,11 @@
 
   &__entry--promo {
     display: inline-block;
+    // width: 200px;
+    max-width: 300px !important;
+    width: inherit !important;
+    margin-right: 20px;
+    // height: auto;
 
     & > h2 {
       font-family: "raleway";
@@ -23,8 +29,8 @@
     }
 
     &--inner {
-      width: 250px;
-      height: 230px;
+      width: 100%;
+      // height: auto;
       // position: absolute;
       background-color: $text-light;
       z-index: 1;
@@ -32,15 +38,15 @@
       & > span {
         text-align: center;
         display: block;
-        padding: 10px 0;
+        padding: 10px;
         font-family: "raleway";
         font-weight: $regular;
-        font-size: 1rem;
+        font-size: 0.85rem;
         color: $primary;
       }
 
       & > img {
-        width: 250px;
+        width: 100%;
         height: auto;
         border: 2px solid white;
         box-sizing: border-box;
@@ -50,5 +56,5 @@
 }
 
 .slick-list {
-  padding: 0 !important;
+  // padding: 0 40px 0 0 !important;
 }

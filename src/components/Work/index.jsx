@@ -8,13 +8,21 @@ import work_1 from "../../images/work_1.png"
 class Work extends React.Component {
   render() {
     const settings = {
-      dots: false,
-      infinite: false,
-      speed: 300,
-      slidesToShow: 1,
       centerMode: true,
-      variableWidth: false,
-      arrows: false,
+      infinite: false,
+      centerPadding: "60px",
+      slidesToShow: 3,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: "40px",
+            slidesToShow: 1,
+          },
+        },
+      ],
     }
     return (
       <div className="work">
