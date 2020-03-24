@@ -6,6 +6,7 @@ import About from "../components/About"
 import Heading from "../components/Heading"
 import Work from "../components/Work"
 import SVG from "../components/SVG"
+import Contact from "../components/Contact"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -24,6 +25,8 @@ const IndexPage = () => (
       fill="#f6e27f"
       className="svg-bottom"
     />
+    <Heading title="contact me" />
+    <Contact />
   </Layout>
 )
 

@@ -1,0 +1,82 @@
+.contact__form {
+  background-color: $text-light;
+  padding: 40px;
+  margin: 60px 0;
+}
+
+.field {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.field__hidden {
+  display: none;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border: 1px solid #002a32;
+  font-family: "raleway";
+  font-weight: 400;
+  font-size: 1rem;
+  color: #002a32;
+  padding: 20px 15px 17.5px 15px;
+  box-sizing: border-box;
+}
+
+.field input {
+  height: 40px;
+}
+
+.field textarea {
+  resize: none;
+}
+
+.field label {
+  font-family: "raleway";
+  font-weight: 300;
+  font-size: 0.875rem;
+  color: $primary;
+  position: absolute;
+  transition: all 0.3s ease 0s;
+  top: -20px;
+  left: 10px;
+  background-color: $secondary;
+  padding: 5px;
+  border: solid 1px $primary;
+}
+
+.field label:focus {
+  border-bottom: 1px solid #f06666;
+}
+
+.submit {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  padding: 0;
+}
+
+.contact__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: $primary;
+  border: none;
+  cursor: pointer;
+
+  & > span {
+    font-family: "raleway";
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: $secondary;
+    text-transform: uppercase;
+  }
+}
