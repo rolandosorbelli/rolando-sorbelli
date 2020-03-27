@@ -8,8 +8,8 @@ input[type="submit"],
 .input-checkbox {
   -webkit-appearance: none;
   border-radius: 0;
-  margin: auto;
-  padding: auto;
+  margin: auto !important;
+  padding: 0 !important;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
