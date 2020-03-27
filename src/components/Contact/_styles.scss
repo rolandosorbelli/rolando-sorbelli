@@ -13,6 +13,19 @@ input[type="submit"],
   background-color: $text-light;
   padding: 40px;
   margin: 30px 0;
+
+  & > span {
+    font-family: "raleway";
+    font-weight: $light;
+    font-size: 0.875rem;
+    color: $primary;
+    margin-bottom: 20px;
+    display: inline-block;
+
+    & span {
+      color: red;
+    }
+  }
 }
 
 .inner {
@@ -73,17 +86,10 @@ input[type="submit"],
 
 .submit {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   text-align: right;
   padding: 0;
-
-  & span {
-    font-family: "raleway";
-    font-weight: $light;
-    font-size: 0.875rem;
-    color: $primary;
-  }
 }
 
 .contact__button {

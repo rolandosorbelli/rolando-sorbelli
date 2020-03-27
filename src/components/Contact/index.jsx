@@ -3,6 +3,9 @@ import React from "react"
 const Contact = () => (
   <div className="contact__section">
     <div className="contact__form">
+      <span>
+        <span>*</span> indicates a required field.
+      </span>
       <div className="inner">
         <form
           method="post"
@@ -31,7 +34,6 @@ const Contact = () => (
             <textarea name="message" rows="6"></textarea>
           </div>
           <div className="submit">
-            <span>* indicates a required field.</span>
             <button type="submit" className="contact__button">
               <span>Send</span>
             </button>
