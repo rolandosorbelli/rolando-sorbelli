@@ -10,6 +10,11 @@ input[type="submit"],
   border-radius: 0;
   margin: auto;
   padding: auto;
+  -webkit-appearance: textfield;
+
+  &::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
 }
 
 .contact__form {
