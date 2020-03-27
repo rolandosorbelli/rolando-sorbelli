@@ -21,14 +21,17 @@ const Contact = () => (
             <input type="text" name="name" />
           </div>
           <div className="field">
-            <label>Your email</label>
-            <input type="text" name="email" />
+            <label>
+              Your email <span>*</span>
+            </label>
+            <input type="text" name="email" required />
           </div>
           <div className="field">
             <label>Your Message</label>
             <textarea name="message" rows="6"></textarea>
           </div>
           <div className="submit">
+            <span>* indicates a required field.</span>
             <button type="submit" className="contact__button">
               <span>Send</span>
             </button>
