@@ -10,7 +10,9 @@ input[type="submit"],
   border-radius: 0;
   margin: auto;
   padding: auto;
-  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
 
   &::-webkit-search-decoration {
     -webkit-appearance: none;
