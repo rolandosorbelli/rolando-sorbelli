@@ -17,11 +17,9 @@ class Header extends React.Component {
           </a>
           <Link
             className="header__items--right"
-            activeClass="active"
             to="heading"
-            spy={true}
             smooth={true}
-            offset={-100}
+            offset={-80}
             duration={500}
           >
             <div className="header__items--right__button">
