@@ -1,0 +1,36 @@
+.footer__top {
+  display: flex;
+  margin: 30px 40px;
+
+  &--left {
+    margin-right: 15%;
+  }
+}
+
+.footer__top--left,
+.footer__top--right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: $secondary;
+}
+
+.footer__bottom {
+  padding: 20px 40px;
+  background-color: $secondary;
+
+  & > span {
+    font-family: "raleway";
+    font-weight: $light;
+    font-size: 0.875rem;
+    color: $primary;
+    display: block;
+
+    &:last-of-type {
+      margin-top: 10px;
+    }
+  }
+}

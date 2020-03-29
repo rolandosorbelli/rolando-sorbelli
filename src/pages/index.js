@@ -7,6 +7,7 @@ import Heading from "../components/Heading"
 import Work from "../components/Work"
 import SVG from "../components/SVG"
 import Contact from "../components/Contact"
+import Footer from "../components/Footer"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -27,6 +28,7 @@ const IndexPage = () => (
     />
     <Heading title="contact me" />
     <Contact />
+    <Footer />
   </Layout>
 )
 
