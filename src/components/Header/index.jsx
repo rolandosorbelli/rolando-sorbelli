@@ -12,11 +12,11 @@ const Header = () => (
           alt="Rolando Sorbelli Logo"
         />
       </a>
-      <div className="header__items--right">
+      <a className="header__items--right" href="#heading">
         <div className="header__items--right__button">
           <span>contact me</span>
         </div>
-      </div>
+      </a>
     </div>
   </header>
 )

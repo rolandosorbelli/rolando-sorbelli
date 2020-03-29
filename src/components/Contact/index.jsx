@@ -1,7 +1,7 @@
 import React from "react"
 
 const Contact = () => (
-  <div className="contact__section">
+  <div className="contact__section" id="heading">
     <div className="contact__form">
       <span>
         <span>*</span> indicates a required field.
