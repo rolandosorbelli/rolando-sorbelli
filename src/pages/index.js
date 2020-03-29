@@ -26,7 +26,7 @@ const IndexPage = () => (
       fill="#f6e27f"
       className="svg-bottom"
     />
-    <Heading title="contact me" />
+    <Heading title="contact" />
     <Contact />
     <Footer />
   </Layout>
