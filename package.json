@@ -24,6 +24,7 @@
     "react-dom": "^16.12.0",
     "react-glider": "^1.1.5",
     "react-helmet": "^5.2.1",
+    "react-scroll": "^1.7.16",
     "react-slick": "^0.25.2",
     "slick-carousel": "^1.8.1"
   },
