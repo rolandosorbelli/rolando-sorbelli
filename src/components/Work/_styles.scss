@@ -1,37 +1,38 @@
 .work {
   display: block;
   background-color: #f6e27f;
-  // height: 220px;
   width: 100%;
 
   &__entry--wrapper {
-    // margin: 0 0 20px 40px;
     margin-bottom: 20px;
-    // display: grid;
-    // grid-template-columns: 1fr auto;
-    // grid-column-gap: 2rem;
   }
 
   &__entry--promo {
     display: inline-block;
-    // width: 200px;
     max-width: 300px !important;
     width: inherit !important;
     margin-right: 20px;
-    // height: auto;
 
-    & > h2 {
+    & > a {
+      text-decoration: none;
+
+      &:hover > h2 {
+        text-decoration: underline;
+      }
+    }
+
+    & h2 {
+      display: inline-block;
       font-family: "raleway";
       font-weight: $bold;
       font-size: 1.125rem;
+      text-decoration: none;
       color: $primary;
       margin: 0 0 10px 0;
     }
 
     &--inner {
       width: 100%;
-      // height: auto;
-      // position: absolute;
       background-color: $text-light;
       z-index: 1;
 
