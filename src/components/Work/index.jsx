@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css"
 import "rodal/lib/rodal.css"
 
 import work_1 from "../../images/work_1.png"
+import bookmark from "../../images/bookmark.svg"
 
 class Work extends React.Component {
   constructor(props) {
@@ -64,6 +65,7 @@ class Work extends React.Component {
             showMask={true}
           >
             <div className="overlay--image">
+              <img src={bookmark} className="bookmark" />
               <img src={work_1} alt="" />
               <h1>Lorem Ipsum</h1>
             </div>

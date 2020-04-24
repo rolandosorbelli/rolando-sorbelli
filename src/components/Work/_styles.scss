@@ -14,6 +14,10 @@
     margin-right: 20px;
     cursor: pointer;
 
+    & a {
+      text-decoration: none;
+    }
+
     & h2 {
       display: inline-block;
       font-family: "raleway";
@@ -55,6 +59,7 @@
 
 .rodal-dialog {
   padding: 0 !important;
+  border-radius: 0 !important;
 }
 
 .overlay--image {
@@ -67,7 +72,9 @@
   & h1 {
     position: absolute;
     bottom: 0;
-    left: 10%;
+    left: 0;
+    margin-left: 10%;
+    margin-right: 10%;
     background-color: $secondary;
     color: $primary;
     display: inline;
@@ -78,6 +85,9 @@
     font-family: "raleway";
     font-weight: $bold;
     font-size: 2rem;
+  }
+
+  .bookmark {
   }
 }
 
@@ -133,9 +143,4 @@
       line-height: 1.5rem;
     }
   }
-}
-
-body.rodal-slideUp-enter {
-  height: 100vh;
-  overflow-y: hidden;
 }
