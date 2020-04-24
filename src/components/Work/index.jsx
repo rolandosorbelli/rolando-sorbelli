@@ -42,7 +42,7 @@ class Work extends React.Component {
 
     const modalStyle = {
       width: "90%",
-      height: "80vh",
+      height: "auto",
       backgroundColor: "#f6e27f",
     }
     return (
