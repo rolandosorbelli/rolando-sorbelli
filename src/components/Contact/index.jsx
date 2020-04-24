@@ -16,22 +16,22 @@ const Contact = () => (
         >
           <input type="hidden" name="form-name" value="contact" />
           <div className="field__hidden">
-            <label>Do not fill</label>
-            <input name="bot" />
+            <label htmlFor="bot">Do not fill</label>
+            <input name="bot" id="bot" />
           </div>
           <div className="field">
-            <label>Your name</label>
-            <input type="text" name="name" />
+            <label htmlFor="name">Your name</label>
+            <input type="text" name="name" id="name" />
           </div>
           <div className="field">
-            <label>
+            <label htmlFor="email">
               Your email <span>*</span>
             </label>
-            <input type="email" name="email" required />
+            <input type="email" name="email" id="email" required />
           </div>
           <div className="field">
-            <label>Your Message</label>
-            <textarea name="message" rows="6"></textarea>
+            <label htmlFor="message">Your Message</label>
+            <textarea name="message" id="message" rows="6"></textarea>
           </div>
           <div className="submit">
             <button type="submit" className="contact__button">
