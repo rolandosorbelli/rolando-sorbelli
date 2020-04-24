@@ -58,11 +58,36 @@ class Work extends React.Component {
               <img src={work_1} alt="" />
             </div>
             <div className="overlay--content">
-              <div className="gradient"></div>
+              <div className="overlay--content--info">
+                <h1>Lorem Ipsum</h1>
+                <a href="/">www.loremipsum.com</a>
+                <p>
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  sed.
+                </p>
+              </div>
+              <div className="overlay--content--stack">
+                <h2>Tech Stack</h2>
+                <ul>
+                  <li>Adobe XD</li>
+                  <li>JavaScript</li>
+                  <li>ReactJS</li>
+                  <li>Gatsby</li>
+                  <li>Netlify</li>
+                  <li>Contentful</li>
+                </ul>
+              </div>
             </div>
           </Rodal>
           <Slider {...settings}>
-            <div className="work__entry--promo" onClick={() => this.show()}>
+            <div
+              className="work__entry--promo"
+              onClick={() => this.show()}
+              onKeyDown={() => this.show()}
+              role="button"
+              tabIndex="0"
+            >
               <h2>Lorem Ipsum</h2>
               <div className="work__entry--promo--inner">
                 <img src={work_1} alt="" />

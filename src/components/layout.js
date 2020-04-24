@@ -20,6 +20,8 @@ const Layout = ({ children }) => {
     }
   `)
 
+  console.log(data, "DATA")
+
   return (
     <>
       <main>{children}</main>
