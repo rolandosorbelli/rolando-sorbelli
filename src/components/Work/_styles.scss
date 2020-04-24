@@ -12,6 +12,7 @@
     max-width: 300px !important;
     width: inherit !important;
     margin-right: 20px;
+    cursor: pointer;
 
     & > a {
       text-decoration: none;
@@ -58,4 +59,30 @@
 
 .slick-list {
   padding: 0 40px !important;
+}
+
+.rodal-dialog {
+  padding: 0 !important;
+}
+
+.overlay--image {
+  & img {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.overlay--content {
+  & .gradient {
+    display: block;
+    position: relative;
+    background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      $secondary 100%
+    );
+    margin-top: -100px;
+    height: 100px;
+    width: 100%;
+  }
 }
