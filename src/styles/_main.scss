@@ -26,3 +26,10 @@ body {
   position: relative;
   overflow-x: hidden;
 }
+
+// Avoid scrolling with modal on
+.noScrolling {
+  height: 100vh;
+  overflow-y: hidden;
+  margin-right: 15px;
+}

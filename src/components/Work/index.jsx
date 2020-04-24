@@ -15,10 +15,18 @@ class Work extends React.Component {
 
   show() {
     this.setState({ visible: true })
+    var body = document.body
+    body.classList.add("noScrolling")
+
+    console.log(body, "BODY")
   }
 
   hide() {
     this.setState({ visible: false })
+    var body = document.body
+    body.classList.remove("noScrolling")
+
+    console.log(body)
   }
 
   render() {
@@ -53,6 +61,7 @@ class Work extends React.Component {
             onClose={() => this.hide()}
             animation="slideUp"
             customStyles={modalStyle}
+            showMask={true}
           >
             <div className="overlay--image">
               <img src={work_1} alt="" />

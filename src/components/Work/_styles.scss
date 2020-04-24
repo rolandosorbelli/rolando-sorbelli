@@ -14,20 +14,12 @@
     margin-right: 20px;
     cursor: pointer;
 
-    & > a {
-      text-decoration: none;
-
-      &:hover > h2 {
-        text-decoration: underline;
-      }
-    }
-
     & h2 {
       display: inline-block;
       font-family: "raleway";
       font-weight: $bold;
       font-size: 1.125rem;
-      text-decoration: none;
+      text-decoration: underline;
       color: $primary;
       margin: 0 0 10px 0;
     }
@@ -131,4 +123,9 @@
       line-height: 1.5rem;
     }
   }
+}
+
+body.rodal-slideUp-enter {
+  height: 100vh;
+  overflow-y: hidden;
 }
