@@ -73,4 +73,54 @@
 }
 
 .overlay--content {
+  margin: 20px 40px;
+  display: block;
+
+  &--info {
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $primary;
+    & h1 {
+      margin-bottom: 20px;
+      font-family: "raleway";
+      font-weight: $light;
+      font-size: 2rem;
+      color: $primary;
+    }
+
+    & a {
+      display: block;
+      overflow-wrap: break-word;
+      margin-bottom: 20px;
+      font-family: "raleway";
+      font-style: italic;
+      font-size: 1rem;
+      color: $primary-light;
+    }
+
+    & p {
+      font-family: "raleway";
+      font-weight: $regular;
+      font-size: 1rem;
+      color: $primary;
+    }
+  }
+
+  &--stack {
+    & h2 {
+      margin-bottom: 10px;
+      font-family: "raleway";
+      font-weight: $bold;
+      font-size: 1.125rem;
+      color: $primary;
+    }
+
+    & li {
+      font-family: "raleway";
+      font-weight: $regular;
+      font-size: 1rem;
+      color: $primary;
+      line-height: 1.5rem;
+    }
+  }
 }
