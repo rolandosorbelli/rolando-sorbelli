@@ -65,10 +65,10 @@ class Work extends React.Component {
           >
             <div className="overlay--image">
               <img src={work_1} alt="" />
+              <h1>Lorem Ipsum</h1>
             </div>
             <div className="overlay--content">
               <div className="overlay--content--info">
-                <h1>Lorem Ipsum</h1>
                 <a href="/">www.loremipsum.com</a>
                 <p>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed

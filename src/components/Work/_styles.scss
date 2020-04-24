@@ -58,9 +58,26 @@
 }
 
 .overlay--image {
+  position: relative;
   & img {
     display: inline-block;
     width: 100%;
+  }
+
+  & h1 {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    background-color: $secondary;
+    color: $primary;
+    display: inline;
+    padding: 0.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    margin-bottom: 20px;
+    font-family: "raleway";
+    font-weight: $bold;
+    font-size: 2rem;
   }
 }
 
@@ -72,13 +89,6 @@
     padding-bottom: 20px;
     margin-bottom: 40px;
     border-bottom: 1px solid $primary;
-    & h1 {
-      margin-bottom: 20px;
-      font-family: "raleway";
-      font-weight: $light;
-      font-size: 2rem;
-      color: $primary;
-    }
 
     & a {
       display: block;
