@@ -103,6 +103,7 @@
       font-weight: $regular;
       font-size: 1rem;
       color: $primary;
+      line-height: 1.5rem;
     }
   }
 
@@ -113,6 +114,13 @@
       font-weight: $bold;
       font-size: 1.125rem;
       color: $primary;
+    }
+
+    & ul {
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
     }
 
     & li {
