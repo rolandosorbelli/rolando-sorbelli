@@ -65,6 +65,7 @@ class Work extends React.Component {
             showMask={true}
           >
             <div className="overlay--image">
+              <img src={bookmark} className="bookmark" />
               <img src={work_1} alt="" />
               <h1>Lorem Ipsum</h1>
             </div>
