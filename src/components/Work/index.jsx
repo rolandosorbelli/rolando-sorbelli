@@ -1,33 +1,32 @@
 import React from "react"
+import { StaticQuery, graphql } from "gatsby"
+
 import Slider from "react-slick"
 import Rodal from "rodal"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import "rodal/lib/rodal.css"
 
-import work_1 from "../../images/work_1.png"
 import bookmark from "../../images/bookmark.svg"
 
 class Work extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { visible: false }
+    this.state = { visible: false, edge: {} }
   }
 
-  show() {
+  async show(edge) {
+    await this.setState({ edge: edge })
     this.setState({ visible: true })
+    console.log(this.state, "STATE")
     var body = document.body
     body.classList.add("noScrolling")
-
-    console.log(body, "BODY")
   }
 
   hide() {
     this.setState({ visible: false })
     var body = document.body
     body.classList.remove("noScrolling")
-
-    console.log(body)
   }
 
   render() {
@@ -54,9 +53,36 @@ class Work extends React.Component {
       height: "auto",
       backgroundColor: "#f6e27f",
     }
+
+    const { data } = this.props
+    const { node } = this.state.edge
+    console.log(node, "NODE")
+
     return (
       <div className="work">
         <div className="work__entry--wrapper">
+          <Slider {...settings}>
+            {data.edges.map(edge => (
+              <div
+                className="work__entry--promo"
+                onClick={() => this.show(edge)}
+                onKeyDown={() => this.show()}
+                role="button"
+                tabIndex="0"
+              >
+                <h2>{edge.node.title}</h2>
+                <div className="work__entry--promo--inner">
+                  <img
+                    src={edge.node.image.fluid.src}
+                    alt={edge.node.image.description}
+                  />
+                  <span>{edge.node.shortSynopsis}</span>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+        {this.state.visible && (
           <Rodal
             visible={this.state.visible}
             onClose={() => this.hide()}
@@ -65,75 +91,73 @@ class Work extends React.Component {
             showMask={true}
           >
             <div className="overlay--image">
-              <img src={bookmark} className="bookmark" />
-              <img src={work_1} alt="" />
-              <h1>Lorem Ipsum</h1>
+              <img src={bookmark} className="bookmark" alt="" />
+              <img src={node.image.fluid.src} alt={node.image.description} />
+              <h1>{node.title}</h1>
             </div>
             <div className="overlay--content">
               <div className="overlay--content--info">
-                <a href="/">www.loremipsum.com</a>
-                <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  sed.
-                </p>
+                <a href={node.url}>{node.url}</a>
+                <p>{node.content.content}</p>
               </div>
               <div className="overlay--content--stack">
                 <h2>Tech Stack</h2>
                 <ul>
-                  <li>Adobe XD</li>
-                  <li>JavaScript</li>
-                  <li>ReactJS</li>
-                  <li>Gatsby</li>
-                  <li>Netlify</li>
-                  <li>Contentful</li>
+                  {node.techStack.map(item => (
+                    <li>{item.name}</li>
+                  ))}
                 </ul>
               </div>
             </div>
           </Rodal>
-          <Slider {...settings}>
-            <div
-              className="work__entry--promo"
-              onClick={() => this.show()}
-              onKeyDown={() => this.show()}
-              role="button"
-              tabIndex="0"
-            >
-              <h2>Lorem Ipsum</h2>
-              <div className="work__entry--promo--inner">
-                <img src={work_1} alt="" />
-                <span>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
-                </span>
-              </div>
-            </div>
-            <div className="work__entry--promo">
-              <a href="/">
-                <h2>Lorem Ipsum</h2>
-                <div className="work__entry--promo--inner">
-                  <img src={work_1} alt="" />
-                  <span>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
-                  </span>
-                </div>
-              </a>
-            </div>
-            <div className="work__entry--promo">
-              <a href="/">
-                <h2>Lorem Ipsum</h2>
-                <div className="work__entry--promo--inner">
-                  <img src={work_1} alt="" />
-                  <span>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
-                  </span>
-                </div>
-              </a>
-            </div>
-          </Slider>
-        </div>
+        )}
       </div>
     )
   }
 }
 
-export default Work
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+          }
+        }
+        allContentfulWorkSection(sort: { fields: createdAt, order: DESC }) {
+          edges {
+            node {
+              id
+              title
+              slug
+              image {
+                description
+                fluid(maxWidth: 1200, quality: 85) {
+                  src
+                  ...GatsbyContentfulFluid
+                }
+              }
+              shortSynopsis
+              content {
+                id
+                content
+              }
+              url
+              techStack {
+                id
+                slug
+                name
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Work site={data.site} data={data.allContentfulWorkSection} />
+    )}
+  />
+)
