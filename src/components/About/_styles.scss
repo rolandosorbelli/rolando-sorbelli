@@ -1,5 +1,11 @@
 .about {
-  margin: 160px 40px 0 40px;
+  overflow: hidden;
+  display: inline-block;
+  margin: 160px 10% 0 10%;
+
+  @include md {
+    margin: 200px 10% 0 10%;
+  }
 
   &__title {
     margin-bottom: 100px;
@@ -9,6 +15,14 @@
       font-weight: 700;
       font-size: 2rem;
       color: $text-light;
+
+      @include sm {
+        font-size: 3rem;
+      }
+
+      @include md {
+        font-size: 5rem;
+      }
 
       & > span {
         font-weight: 100;
@@ -21,11 +35,25 @@
       font-size: 2rem;
       color: $text-light;
       margin-top: 2px;
+
+      @include sm {
+        font-size: 2.5rem;
+      }
+
+      @include md {
+        font-size: 3rem;
+      }
     }
   }
 
   &__content {
     width: 85%;
+    margin-bottom: 80px;
+
+    @include lg {
+      width: 50%;
+      float: right;
+    }
 
     & > p {
       font-family: "raleway";
@@ -35,7 +63,6 @@
       color: $text-light;
       letter-spacing: 0.1rem;
       line-height: 25px;
-      margin-bottom: 80px;
     }
   }
 }
