@@ -2,6 +2,7 @@
   display: block;
   background-color: #f6e27f;
   width: 100%;
+  padding: 40px 0;
 
   &__entry--wrapper {
     margin-bottom: 20px;
@@ -52,13 +53,8 @@
     }
   }
 
-  // .first-promo {
-  //   padding-left: 10%;
-  // }
-
   .slick-current > div {
     padding-left: 10%;
-    //   margin-right: -40px;
   }
 }
 
@@ -71,17 +67,40 @@
   display: none;
 
   @include md {
-    top: -280px !important;
+    top: -200px !important;
     left: 10% !important;
 
     &::before {
+      display: block !important;
       font-size: 3.5rem !important;
+      color: $secondary !important;
     }
   }
 }
 
+.slick-prev {
+  &::before {
+    // display: block;
+    content: " " !important;
+    background-image: url("../images/arrow-left.svg");
+    background-size: 50px 50px;
+    height: 50px;
+    width: 50px;
+  }
+}
+
 .slick-next {
+  &::before {
+    // display: block;
+    content: " " !important;
+    background-image: url("../images/arrow-right.svg");
+    background-size: 50px 50px;
+    height: 50px;
+    width: 50px;
+  }
+
   @include md {
+    display: block;
     left: calc(10% + 80px) !important;
   }
 }
