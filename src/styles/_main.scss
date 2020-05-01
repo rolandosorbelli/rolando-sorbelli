@@ -33,6 +33,8 @@ body {
   overflow-y: hidden;
   margin-right: 15px;
 
-  // MOBILE - REMEMBER!!!
-  // position: fixed;
+  @media (max-width: 768px) {
+    // MOBILE - REMEMBER!!!
+    position: fixed;
+  }
 }
