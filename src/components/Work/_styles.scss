@@ -3,7 +3,7 @@
   background-color: #f6e27f;
   width: 100%;
   padding: 40px 0;
-  overflow: hidden;
+  // overflow: hidden;
 
   &__entry--wrapper {
     margin-bottom: 20px;
@@ -65,9 +65,10 @@
 
 .slick-prev,
 .slick-next {
-  display: none;
+  display: none !important;
 
   @include md {
+    display: block !important;
     top: -200px !important;
     left: 10% !important;
 
