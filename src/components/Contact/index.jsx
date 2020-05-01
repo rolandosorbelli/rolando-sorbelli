@@ -1,4 +1,5 @@
 import React from "react"
+import message from "../../images/message.svg"
 
 const Contact = () => (
   <div className="contact__section" id="heading">
@@ -40,6 +41,9 @@ const Contact = () => (
           </div>
         </form>
       </div>
+    </div>
+    <div className="contact-svg">
+      <img src={message} alt="message" />
     </div>
   </div>
 )
