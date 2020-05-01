@@ -51,10 +51,39 @@
       }
     }
   }
+
+  // .first-promo {
+  //   padding-left: 10%;
+  // }
+
+  .slick-current > div {
+    padding-left: 10%;
+    //   margin-right: -40px;
+  }
 }
 
 .slick-list {
-  padding: 0 40px !important;
+  padding: 0 !important;
+}
+
+.slick-prev,
+.slick-next {
+  display: none;
+
+  @include md {
+    top: -280px !important;
+    left: 10% !important;
+
+    &::before {
+      font-size: 3.5rem !important;
+    }
+  }
+}
+
+.slick-next {
+  @include md {
+    left: calc(10% + 80px) !important;
+  }
 }
 
 .rodal-dialog {

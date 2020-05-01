@@ -10,6 +10,10 @@
   &__title {
     margin-bottom: 100px;
 
+    @include md {
+      margin-bottom: 200px;
+    }
+
     & > h1 {
       font-family: "raleway";
       font-weight: 700;
@@ -51,7 +55,7 @@
     margin-bottom: 80px;
 
     @include lg {
-      width: 50%;
+      width: 75%;
       float: right;
     }
 
@@ -63,6 +67,12 @@
       color: $text-light;
       letter-spacing: 0.1rem;
       line-height: 25px;
+
+      @include lg {
+        font-size: 1.5rem;
+        line-height: 2.375rem;
+        font-weight: $thin;
+      }
     }
   }
 }

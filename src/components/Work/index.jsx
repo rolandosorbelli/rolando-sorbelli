@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import classNames from "classnames"
 
 import Slider from "react-slick"
 import Rodal from "rodal"
@@ -31,15 +32,16 @@ class Work extends React.Component {
 
   render() {
     const settings = {
+      className: "test",
       centerMode: true,
       infinite: false,
       centerPadding: "60px",
-      slidesToShow: 3,
+      slidesToShow: 1,
       responsive: [
         {
-          breakpoint: 768,
+          breakpoint: 992,
           settings: {
-            arrows: false,
+            arrows: true,
             centerMode: true,
             centerPadding: "40px",
             slidesToShow: 1,
@@ -62,9 +64,11 @@ class Work extends React.Component {
       <div className="work">
         <div className="work__entry--wrapper">
           <Slider {...settings}>
-            {data.edges.map(edge => (
+            {data.edges.map((edge, i) => (
               <div
-                className="work__entry--promo"
+                className={classNames("work__entry--promo", {
+                  "first-promo": i === 0,
+                })}
                 onClick={() => this.show(edge)}
                 onKeyDown={() => this.show()}
                 role="button"
