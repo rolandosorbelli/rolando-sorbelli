@@ -35,7 +35,7 @@ class Work extends React.Component {
       className: "test",
       centerMode: true,
       infinite: false,
-      centerPadding: "60px",
+      centerPadding: "80px",
       slidesToShow: 1,
       responsive: [
         {
