@@ -74,12 +74,14 @@ class Work extends React.Component {
                 role="button"
                 tabIndex="0"
               >
-                <h2>{edge.node.title}</h2>
+                <div
+                  className="work__entry--promo--image"
+                  style={{
+                    backgroundImage: `url(${edge.node.image.fluid.src})`,
+                  }}
+                ></div>
                 <div className="work__entry--promo--inner">
-                  <img
-                    src={edge.node.image.fluid.src}
-                    alt={edge.node.image.description}
-                  />
+                  <h2>{edge.node.title}</h2>
                   <span>{edge.node.shortSynopsis}</span>
                 </div>
               </div>

@@ -11,37 +11,47 @@
 
   &__entry--promo {
     display: inline-block;
-    max-width: 300px !important;
+    max-width: 400px !important;
     width: inherit !important;
+    height: 100%;
     margin-right: 20px;
     cursor: pointer;
+    box-sizing: border-box;
 
     & a {
       text-decoration: none;
     }
 
-    & h2 {
-      display: inline-block;
-      font-family: "raleway";
-      font-weight: $bold;
-      font-size: 1.125rem;
-      text-decoration: underline;
-      color: $primary;
-      margin: 0 0 10px 0;
+    &--image {
+      height: 300px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
     }
 
     &--inner {
       width: 100%;
       background-color: $text-light;
       z-index: 1;
+      padding: 20px;
+      box-sizing: border-box;
+
+      & h2 {
+        display: inline-block;
+        font-family: "playfair display";
+        font-weight: $regular;
+        font-size: 1.125rem;
+        color: $primary;
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
 
       & > span {
-        text-align: center;
         display: block;
-        padding: 10px;
         font-family: "raleway";
         font-weight: $regular;
-        font-size: 0.85rem;
+        font-size: 1rem;
         color: $primary;
       }
 

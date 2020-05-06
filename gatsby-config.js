@@ -20,7 +20,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`raleway\:100,100i,300,400,400i,700`],
+        fonts: [`raleway\:100,100i,300,400,400i,700`, `playfair display`],
       },
       display: "swap",
     },
