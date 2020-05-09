@@ -142,6 +142,13 @@
 .rodal-dialog {
   padding: 0 !important;
   border-radius: 0 !important;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary;
+  }
 }
 
 .rodal-close {
@@ -178,8 +185,8 @@
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     margin-bottom: 20px;
-    font-family: "raleway";
-    font-weight: $bold;
+    font-family: "playfair display";
+    font-weight: 900;
     font-size: 2rem;
   }
 
@@ -210,6 +217,14 @@
       color: $primary-light;
     }
 
+    & h2 {
+      margin-bottom: 10px;
+      font-family: "playfair display";
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: $primary;
+    }
+
     & p {
       font-family: "raleway";
       font-weight: $regular;
@@ -222,9 +237,9 @@
   &--stack {
     & h2 {
       margin-bottom: 10px;
-      font-family: "raleway";
-      font-weight: $bold;
-      font-size: 1.125rem;
+      font-family: "playfair display";
+      font-weight: 900;
+      font-size: 1.25rem;
       color: $primary;
     }
 

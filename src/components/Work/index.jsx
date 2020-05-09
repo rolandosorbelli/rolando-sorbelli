@@ -70,6 +70,7 @@ class Work extends React.Component {
     const modalStyle = {
       width: "90%",
       height: "auto",
+      overflowY: "scroll",
       backgroundColor: "#f6e27f",
     }
 
@@ -128,7 +129,9 @@ class Work extends React.Component {
             </div>
             <div className="overlay--content">
               <div className="overlay--content--info">
+                <h2>URL</h2>
                 <a href={node.url}>{node.url}</a>
+                <h2>Info</h2>
                 <p>{node.content.content}</p>
               </div>
               <div className="overlay--content--stack">
