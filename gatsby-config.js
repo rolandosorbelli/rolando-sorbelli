@@ -22,7 +22,7 @@ module.exports = {
       options: {
         fonts: [
           `raleway\:100,100i,300,400,400i,700`,
-          `playfair display\:400,900`,
+          `playfair display\:400,600,900`,
         ],
       },
       display: "swap",
