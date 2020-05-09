@@ -52,7 +52,7 @@
         font-family: "raleway";
         font-weight: $regular;
         font-size: 1rem;
-        line-height: 1.4rem;
+        line-height: 1.5rem;
         color: $primary;
         display: -webkit-box;
         -webkit-line-clamp: 3;
@@ -71,10 +71,18 @@
 
     &-right {
       margin-left: 10px;
-      padding: 10px;
-      background: red;
+      padding: 0 10px;
+      // background: red;
       width: 50%;
       height: auto;
+    }
+
+    & p {
+      font-family: "raleway";
+      font-weight: $regular;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: $primary;
     }
   }
 }
