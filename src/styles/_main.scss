@@ -29,12 +29,12 @@ body {
 
 // Avoid scrolling with modal on
 .noScrolling {
-  height: 100vh;
-  overflow-y: hidden;
+  // height: 100vh;
+  // overflow-y: hidden;
   // margin-right: 15px;
 
   @media (max-width: 768px) {
     // MOBILE - REMEMBER!!!
-    // position: fixed;
+    position: fixed;
   }
 }
