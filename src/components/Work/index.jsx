@@ -185,7 +185,6 @@ export default () => (
                   ...GatsbyContentfulFluid
                 }
               }
-              shortSynopsis
               content {
                 id
                 content
