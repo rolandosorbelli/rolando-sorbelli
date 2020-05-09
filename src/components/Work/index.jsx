@@ -102,14 +102,16 @@ class Work extends React.Component {
                   ></div>
                   <div className="work__entry--promo--inner">
                     <h2>{edge.node.title}</h2>
-                    <span>{edge.node.shortSynopsis}</span>
+                    {this.state.isDesktop ? (
+                      <a href={edge.node.url}>{edge.node.url}</a>
+                    ) : (
+                      <span>{edge.node.content.content}</span>
+                    )}
                   </div>
                 </div>
 
                 {this.state.isDesktop && (
                   <div className="work__entry--promo-right">
-                    <h2>URL</h2>
-                    <a href={edge.node.url}>{edge.node.url}</a>
                     <h2>Info</h2>
                     <p>{edge.node.content.content}</p>
                     <h2>Tech Stack</h2>
@@ -139,7 +141,6 @@ class Work extends React.Component {
             </div>
             <div className="overlay--content">
               <div className="overlay--content--info">
-                <h2>URL</h2>
                 <a href={node.url}>{node.url}</a>
                 <h2>Info</h2>
                 <p>{node.content.content}</p>
