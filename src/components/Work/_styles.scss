@@ -93,6 +93,7 @@
       font-family: "raleway";
       font-style: italic;
       font-size: 1rem;
+      line-height: 1.5rem;
       color: $primary-light;
     }
 
@@ -105,7 +106,7 @@
     }
 
     & ul {
-      height: 80px;
+      height: 90px;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
