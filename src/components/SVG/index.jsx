@@ -10,7 +10,7 @@ const SVG = ({ path, fill, className, height, width }) => {
         height={height}
         width={width}
       >
-        <path fill={fill} fill-opacity="1" d={path}></path>
+        <path fill={fill} fillOpacity="1" d={path}></path>
       </svg>
     </div>
   )

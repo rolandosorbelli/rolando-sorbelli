@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import classNames from "classnames"
-
+import throttle from "lodash.throttle"
 import Slider from "react-slick"
 import Rodal from "rodal"
 import "slick-carousel/slick/slick.css"
@@ -13,7 +13,7 @@ import bookmark from "../../images/bookmark.svg"
 class Work extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { visible: false, edge: {} }
+    this.state = { visible: false, edge: {}, isDesktop: false }
   }
 
   async show(edge) {
@@ -28,6 +28,23 @@ class Work extends React.Component {
     this.setState({ visible: false })
     var body = document.body
     body.classList.remove("noScrolling")
+  }
+
+  handleWindowResize = () => {
+    return throttle(() => {
+      this.setState({ isDesktop: window.innerWidth > 991 })
+    }, 200)
+  }
+
+  componentDidMount() {
+    if (window.innerWidth > 991) {
+      this.setState({ isDesktop: true })
+    }
+    window.addEventListener("resize", this.handleWindowResize())
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.handleWindowResize())
   }
 
   render() {
@@ -58,7 +75,6 @@ class Work extends React.Component {
 
     const { data } = this.props
     const { node } = this.state.edge
-    console.log(node, "NODE")
 
     return (
       <div className="work">
@@ -69,21 +85,30 @@ class Work extends React.Component {
                 className={classNames("work__entry--promo", {
                   "first-promo": i === 0,
                 })}
-                onClick={() => this.show(edge)}
+                onClick={() => (this.state.isDesktop ? false : this.show(edge))}
                 onKeyDown={() => this.show()}
                 role="button"
                 tabIndex="0"
+                key={i}
               >
-                <div
-                  className="work__entry--promo--image"
-                  style={{
-                    backgroundImage: `url(${edge.node.image.fluid.src})`,
-                  }}
-                ></div>
-                <div className="work__entry--promo--inner">
-                  <h2>{edge.node.title}</h2>
-                  <span>{edge.node.shortSynopsis}</span>
+                <div className="work__entry--promo-left">
+                  <div
+                    className="work__entry--promo--image"
+                    style={{
+                      backgroundImage: `url(${edge.node.image.fluid.src})`,
+                    }}
+                  ></div>
+                  <div className="work__entry--promo--inner">
+                    <h2>{edge.node.title}</h2>
+                    <span>{edge.node.shortSynopsis}</span>
+                  </div>
                 </div>
+
+                {this.state.isDesktop && (
+                  <div className="work__entry--promo-right">
+                    <p>{edge.node.content.content}</p>
+                  </div>
+                )}
               </div>
             ))}
           </Slider>

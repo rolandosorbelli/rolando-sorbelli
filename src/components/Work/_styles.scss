@@ -14,13 +14,17 @@
   }
 
   &__entry--promo {
-    display: inline-block;
-    max-width: 400px !important;
+    display: flex !important;
+    // max-width: 400px !important;
     width: inherit !important;
     height: 100%;
     margin-right: 30px;
     cursor: pointer;
     box-sizing: border-box;
+
+    @include md {
+      cursor: default;
+    }
 
     & a {
       text-decoration: none;
@@ -70,15 +74,31 @@
         box-sizing: border-box;
       }
     }
+
+    &-left {
+      max-width: 100%;
+
+      @include md {
+        max-width: 50%;
+      }
+    }
+
+    &-right {
+      margin-left: 10px;
+      padding: 10px;
+      background: red;
+      width: 50%;
+      height: auto;
+    }
   }
 
   .slick-current > div {
-    padding-left: 10%;
+    // padding-left: 10%;
   }
 }
 
 .slick-list {
-  padding: 0 !important;
+  padding: 0 0 0 10% !important;
 }
 
 .slick-prev,
@@ -87,7 +107,7 @@
 
   @include md {
     display: block !important;
-    top: -200px !important;
+    top: -160px !important;
     left: 10% !important;
 
     &::before {
