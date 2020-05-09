@@ -54,6 +54,7 @@ class Work extends React.Component {
       infinite: false,
       centerPadding: "80px",
       slidesToShow: 1,
+      draggable: this.state.isDesktop ? false : true,
       responsive: [
         {
           breakpoint: 992,
@@ -107,7 +108,16 @@ class Work extends React.Component {
 
                 {this.state.isDesktop && (
                   <div className="work__entry--promo-right">
+                    <h2>URL</h2>
+                    <a href={edge.node.url}>{edge.node.url}</a>
+                    <h2>Info</h2>
                     <p>{edge.node.content.content}</p>
+                    <h2>Tech Stack</h2>
+                    <ul>
+                      {edge.node.techStack.map(item => (
+                        <li>{item.name}</li>
+                      ))}
+                    </ul>
                   </div>
                 )}
               </div>
