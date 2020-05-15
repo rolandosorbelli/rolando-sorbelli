@@ -1,6 +1,6 @@
 .footer__top {
   display: flex;
-  margin: 30px 40px;
+  margin: 30px 10%;
 
   &--left {
     margin-right: 30px;
@@ -19,7 +19,7 @@
 }
 
 .footer__bottom {
-  padding: 20px 40px;
+  padding: 20px 10%;
   background-color: $secondary;
 
   & > span {
