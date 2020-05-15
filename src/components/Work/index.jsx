@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css"
 import "rodal/lib/rodal.css"
 
 import bookmark from "../../images/bookmark.svg"
+import Heading from "../Heading"
 
 class Work extends React.Component {
   constructor(props) {
@@ -80,6 +81,7 @@ class Work extends React.Component {
 
     return (
       <div className="work">
+        <Heading title="work" />
         <div className="work__entry--wrapper">
           <Slider {...settings}>
             {data.edges.map((edge, i) => (

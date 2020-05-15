@@ -15,7 +15,6 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Header />
     <About />
-    <Heading title="work" />
     <SVG path="M0,256L1440,288L1440,320L0,320Z" fill="#f6e27f" />
     <Work />
     <SVG
@@ -23,7 +22,6 @@ const IndexPage = () => (
       fill="#f6e27f"
       className="svg-bottom"
     />
-    <Heading title="contact" />
     <Contact />
     <Footer />
   </Layout>

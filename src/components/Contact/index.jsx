@@ -1,8 +1,10 @@
 import React from "react"
 import message from "../../images/message.svg"
+import Heading from "../Heading"
 
 const Contact = () => (
   <div className="contact__section" id="heading">
+    <Heading title="contact" />
     <div className="contact__form">
       <span>
         <span>*</span> indicates a required field.
