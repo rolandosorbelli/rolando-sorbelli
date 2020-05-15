@@ -14,6 +14,12 @@ const Footer = () => (
           <img className="footer__top--image" src={github} alt="Github" />
         </div>
       </a>
+      <div className="footer__top--text">
+        <span>GitHub</span>
+        <a href="https://github.com/rolandosorbelli">
+          https://github.com/rolandosorbelli
+        </a>
+      </div>
       <a
         href="https://www.linkedin.com/in/rolandosorbelli/"
         className="footer__top--right"
@@ -22,6 +28,12 @@ const Footer = () => (
           <img className="footer__top--image" src={linkedin} alt="Linkedin" />
         </div>
       </a>
+      <div className="footer__top--text">
+        <span>Linkedin</span>
+        <a href="https://www.linkedin.com/in/rolandosorbelli/">
+          https://www.linkedin.com/in/rolandosorbelli
+        </a>
+      </div>
     </div>
     <div className="footer__bottom">
       <span>

@@ -2,8 +2,34 @@
   display: flex;
   margin: 30px 10%;
 
-  &--left {
+  &--left,
+  &--right {
     margin-right: 30px;
+  }
+
+  &--text {
+    display: none;
+
+    @include md {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: "raleway";
+      font-weight: $light;
+      font-size: 0.875rem;
+      color: $secondary;
+      line-height: 1.5rem;
+      margin-right: 30px;
+
+      & span {
+        font-family: "playfair display";
+        font-weight: $bold;
+      }
+
+      & a:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 

@@ -28,6 +28,11 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
 // Avoid scrolling with modal on
 .noScrolling {
   // height: 100vh;
