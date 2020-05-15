@@ -18,7 +18,7 @@ class Header extends React.Component {
           <Link
             className="header__items--right"
             to="heading"
-            smooth={true}
+            smooth="easeOutQuad"
             offset={-80}
             duration={500}
           >
