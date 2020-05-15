@@ -23,9 +23,10 @@ input[type="submit"],
   background-color: #fff;
   display: block;
   padding: 0 10%;
-  margin-top: 120px;
+  margin-top: 40px;
 
   @include md {
+    margin-top: 120px;
     display: flex;
     align-items: center;
     justify-content: space-between;
