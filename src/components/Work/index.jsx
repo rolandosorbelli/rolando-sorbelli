@@ -116,12 +116,17 @@ class Work extends React.Component {
                   <div className="work__entry--promo-right">
                     <h2>Info</h2>
                     <p>{edge.node.content.content}</p>
-                    <h2>Tech Stack</h2>
-                    <ul>
-                      {edge.node.techStack.map(item => (
-                        <li>{item.name}</li>
-                      ))}
-                    </ul>
+                    {edge.node.techStack && (
+                      <>
+                        <h2>Tech Stack</h2>
+                        <ul>
+                          {edge.node.techStack &&
+                            edge.node.techStack.map(item => (
+                              <li>{item.name}</li>
+                            ))}
+                        </ul>
+                      </>
+                    )}
                   </div>
                 )}
               </div>
@@ -147,14 +152,16 @@ class Work extends React.Component {
                 <h2>Info</h2>
                 <p>{node.content.content}</p>
               </div>
-              <div className="overlay--content--stack">
-                <h2>Tech Stack</h2>
-                <ul>
-                  {node.techStack.map(item => (
-                    <li>{item.name}</li>
-                  ))}
-                </ul>
-              </div>
+              {node.techStack && (
+                <div className="overlay--content--stack">
+                  <h2>Tech Stack</h2>
+                  <ul>
+                    {node.techStack.map(item => (
+                      <li>{item.name}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </Rodal>
         )}
