@@ -6,9 +6,6 @@ const Contact = () => (
   <div className="contact__section" id="heading">
     <Heading title="contact" />
     <div className="contact__form">
-      <span>
-        <span>*</span> indicates a required field.
-      </span>
       <div className="inner">
         <form
           method="post"
@@ -24,17 +21,15 @@ const Contact = () => (
           </div>
           <div className="field">
             <label htmlFor="name">Your name</label>
-            <input type="text" name="name" id="name" />
+            <input type="text" name="name" id="name" required />
           </div>
           <div className="field">
-            <label htmlFor="email">
-              Your email <span>*</span>
-            </label>
+            <label htmlFor="email">Your email</label>
             <input type="email" name="email" id="email" required />
           </div>
           <div className="field">
             <label htmlFor="message">Your message</label>
-            <textarea name="message" id="message" rows="6"></textarea>
+            <textarea name="message" id="message" rows="6" required></textarea>
           </div>
           <div className="submit">
             <button type="submit" className="contact__button">
