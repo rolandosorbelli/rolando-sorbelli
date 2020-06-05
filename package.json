@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Rolando Sorbelli",
   "dependencies": {
+    "aos": "^2.3.4",
     "browser-monads": "^1.0.0",
     "flickity": "^2.2.1",
     "gatsby": "^2.19.7",

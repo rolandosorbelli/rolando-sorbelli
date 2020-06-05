@@ -7,6 +7,8 @@ import Rodal from "rodal"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import "rodal/lib/rodal.css"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 import bookmark from "../../images/bookmark.svg"
 import Heading from "../Heading"
@@ -38,6 +40,11 @@ class Work extends React.Component {
   }
 
   componentDidMount() {
+    AOS.init({
+      duration: 2000,
+      once: true,
+    })
+
     if (window.innerWidth > 991) {
       this.setState({ isDesktop: true })
     }
@@ -94,6 +101,7 @@ class Work extends React.Component {
                 role="button"
                 tabIndex="0"
                 key={i}
+                data-aos="fade-right"
               >
                 <div className="work__entry--promo-left">
                   <div
