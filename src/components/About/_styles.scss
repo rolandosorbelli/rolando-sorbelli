@@ -73,5 +73,13 @@
         font-weight: $thin;
       }
     }
+
+    & a {
+      background-color: $secondary;
+      padding: 5px;
+      color: $primary;
+      font-weight: 700;
+      text-decoration: underline;
+    }
   }
 }
