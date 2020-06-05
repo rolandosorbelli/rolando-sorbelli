@@ -6,7 +6,7 @@ const About = () => (
       <h1>
         Rolando <span>/</span> Sorbelli
       </h1>
-      <h2>software engineer</h2>
+      <h2>Software Engineer</h2>
     </div>
     <div className="about__content">
       <p>

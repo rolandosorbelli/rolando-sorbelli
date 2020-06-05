@@ -145,17 +145,28 @@ input[type="submit"],
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 120px;
-  height: 30px;
-  border-radius: 15px;
+  width: 200px;
+  padding: 15px;
   background-color: $primary;
   border: none;
   cursor: pointer;
+  transition: all ease-in-out 0.4s;
+
+  &:hover {
+    background-color: $secondary;
+    -webkit-transition: all ease-in-out 0.4s;
+    -moz-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+
+    & span {
+      color: $primary;
+    }
+  }
 
   & > span {
     font-family: "raleway";
     font-weight: $bold;
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: $secondary;
     text-transform: uppercase;
   }
