@@ -18,8 +18,19 @@
 
 html {
   font-size: 16px;
-  background-color: rgb(0, 42, 50);
+  background: linear-gradient(-45deg, $primary-light, $primary);
+  background-size: 400%;
   scroll-behavior: smooth;
+  animation: bg-animation 20s infinite alternate;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }
 
 body {
