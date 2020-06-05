@@ -26,19 +26,31 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 25px;
-      background-color: $secondary;
-      padding: 8px 20px;
+      border: 3px solid $secondary;
+      background-color: inherit;
+      padding: 15px 30px;
+      transition: all 0.4s;
+
+      &:hover {
+        background-color: $secondary;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+
+        & span {
+          color: inherit;
+        }
+      }
 
       & > span {
         font-family: "raleway";
         font-weight: 700;
         font-size: 0.875rem;
-        color: $primary;
+        color: $secondary;
         text-transform: uppercase;
 
         @include md {
-          font-size: 1.25rem;
+          font-size: 1rem;
         }
       }
     }
