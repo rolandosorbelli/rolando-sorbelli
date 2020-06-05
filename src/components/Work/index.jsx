@@ -129,8 +129,8 @@ class Work extends React.Component {
                         <h2>Tech Stack</h2>
                         <ul>
                           {edge.node.techStack &&
-                            edge.node.techStack.map(item => (
-                              <li>{item.name}</li>
+                            edge.node.techStack.map((item, i) => (
+                              <li key={i}>{item.name}</li>
                             ))}
                         </ul>
                       </>
