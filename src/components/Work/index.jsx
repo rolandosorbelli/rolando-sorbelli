@@ -113,7 +113,7 @@ class Work extends React.Component {
                   <div className="work__entry--promo--inner">
                     <h2>{edge.node.title}</h2>
                     {this.state.isDesktop ? (
-                      <a href={edge.node.url}>{edge.node.url}</a>
+                      <a href={`https://${edge.node.url}`}>{edge.node.url}</a>
                     ) : (
                       <span>{edge.node.content.content}</span>
                     )}
