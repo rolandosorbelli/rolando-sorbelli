@@ -156,7 +156,7 @@ class Work extends React.Component {
             </div>
             <div className="overlay--content">
               <div className="overlay--content--info">
-                <a href={node.url}>{node.url}</a>
+                <a href={`https://${node.url}`}>{node.url}</a>
                 <h2>Info</h2>
                 <p>{node.content.content}</p>
               </div>
