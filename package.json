@@ -19,6 +19,7 @@
     "gatsby-source-contentful": "^2.2.10",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-sharp": "^2.3.13",
+    "graphql-playground-html": "^1.6.22",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
